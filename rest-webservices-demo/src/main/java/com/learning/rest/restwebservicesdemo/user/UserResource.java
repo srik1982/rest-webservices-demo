@@ -1,6 +1,7 @@
 package com.learning.rest.restwebservicesdemo.user;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -61,6 +62,7 @@ public class UserResource {
 		}
 		
 		List<User> users = userDao.getUsers();
+		
 		Users allUsers = new Users(users);
 		Resource<Users> res = new Resource<Users>(allUsers);
 		
